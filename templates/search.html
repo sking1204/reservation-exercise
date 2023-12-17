@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% block title %}{{ customer.fullName }} {% endblock %}
+
+
+{% block content %}
+
+<form action="/search/" method="POST">
+  <h1>Search Customer</h1>
+
+    <div class="form-group">
+      <label for="first-name">First Name: </label>
+        <input id="first-name"
+               class="form-control"
+               name="firstName"
+               value="{{ customer.firstName }}">
+    </div>
+    <div class="form-group">
+      <label for="last-name">Last Name:</label>
+          <input id="last-name"
+                 class="form-control"
+                 name="lastName"
+                 value="{{ customer.lastName }}">
+    </div>
+    
+    <button class="btn btn-primary">Search</button>
+    
+  </form>
+    {% endblock %} 
